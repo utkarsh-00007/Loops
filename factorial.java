@@ -8,10 +8,15 @@ public class Factorial {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number you want factorial : ");
         int n = sc.nextInt();
-        int factorial = 1;
-        for (int i = n; i>0;i--){
-            factorial = factorial*i;
+        if (n<0) {
+            System.out.println("Invalid Number");
         }
-        System.out.println("The factorial of "+ n+ " is : "+ factorial);
+        else {
+            int factorial = 1;
+            for (int i = n; i > 0; i--) {
+                factorial = factorial * i;
+            }
+            System.out.println("The factorial of " + n + " is : " + factorial);
+        }
     }
 }
